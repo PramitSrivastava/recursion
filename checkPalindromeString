@@ -1,0 +1,24 @@
+public class JavaBasics
+{
+    public static boolean checkPalindrome(String st)
+    {
+        return checkPalindrome(st,0,st.length()-1);
+    }
+    private static boolean checkPalindrome(String st , int start , int end)
+    {
+        if(start >= end)
+        {
+            return true;
+        }
+        if(st.charAt(end) == st.charAt(start))
+        {
+            return checkPalindrome(st, start + 1, end - 1);
+        }
+        return false;
+    }
+    public static void main(String args [])
+    {
+        String str = "abba";
+        System.out.println(checkPalindrome(str));
+    }
+} 
